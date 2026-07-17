@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anvitech - Công ty Kỹ thuật Cơ Điện & Năng lượng</title>
+    <!-- Tích hợp Tailwind CSS để tạo giao diện nhanh -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tích hợp Font chữ Inter hiện đại -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Cấu hình màu sắc thương hiệu theo logo Anvitech -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1E3A8A',   /* Xanh Navy chủ đạo */
+                        orange: '#F97316', /* Cam điểm nhấn */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Header / Menu điều hướng -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <!-- Hiển thị Logo -->
+                <img src="antitech.jpg" alt="Anvitech Logo" class="h-12 object-contain rounded">
+            </div>
+            <nav class="hidden md:flex gap-8 font-semibold text-gray-700">
+                <a href="#about" class="hover:text-orange transition duration-300">Về chúng tôi</a>
+                <a href="#services" class="hover:text-orange transition duration-300">Dịch vụ</a>
+                <a href="#contact" class="hover:text-orange transition duration-300">Liên hệ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section (Phần giới thiệu mở đầu) -->
+    <section id="about" class="bg-navy text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Giải pháp Kỹ thuật Toàn diện cho Dân dụng & Công nghiệp</h1>
+            <p class="text-lg md:text-xl mb-10 text-gray-200">
+                Anvitech tự hào là đơn vị chuyên nghiệp cung cấp các dịch vụ thi công, lắp đặt Năng lượng mặt trời, Hệ thống Cơ - Điện - Lạnh, Gia công Cơ khí và Hệ thống Thang máy nâng hạ.
+            </p>
+            <a href="#contact" class="bg-orange text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-orange-600 transition duration-300 shadow-lg">
+                Nhận tư vấn ngay
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section (Danh mục dịch vụ từ Excel) -->
+    <section id="services" class="max-w-7xl mx-auto py-20 px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Lĩnh Vực Hoạt Động</h2>
+            <div class="w-24 h-1 bg-orange mx-auto rounded"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Khối 1: Năng lượng mặt trời -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 group">
+                <div class="text-orange text-5xl mb-6 transform group-hover:scale-110 transition duration-300">☀️</div>
+                <h3 class="text-xl font-bold text-navy mb-3">Năng Lượng Mặt Trời</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Lắp đặt hệ thống điện mặt trời hiệu suất cao cho dân dụng (gia đình, chung cư) và công nghiệp (nhà máy, nhà xưởng).
+                </p>
+            </div>
+
+            <!-- Khối 2: Lắp đặt điện -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 group">
+                <div class="text-orange text-5xl mb-6 transform group-hover:scale-110 transition duration-300">⚡</div>
+                <h3 class="text-xl font-bold text-navy mb-3">Hệ Thống Điện</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Thi công hệ thống điện Smart Home, tủ điện công nghiệp, mạng lưới LAN, Camera an ninh và trạm máy phát điện kết nối tự động.
+                </p>
+            </div>
+
+            <!-- Khối 3: Cơ điện lạnh -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 group">
+                <div class="text-orange text-5xl mb-6 transform group-hover:scale-110 transition duration-300">❄️</div>
+                <h3 class="text-xl font-bold text-navy mb-3">Cơ Điện Lạnh</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Lắp đặt điều hòa trung tâm (Chiller, AHU), hệ thống thông gió, cân bằng áp suất và thiết bị phụ trợ xử lý nước thải.
+                </p>
+            </div>
+
+            <!-- Khối 4: Cơ khí -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 group">
+                <div class="text-orange text-5xl mb-6 transform group-hover:scale-110 transition duration-300">🏗️</div>
+                <h3 class="text-xl font-bold text-navy mb-3">Gia Công Cơ Khí</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Thiết kế và gia công kết cấu thép chịu lực, cửa nhôm hệ, khung bảo vệ, bàn thao tác và nội thất kim loại thẩm mỹ.
+                </p>
+            </div>
+
+            <!-- Khối 5: Thang máy & Nâng hạ -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 group">
+                <div class="text-orange text-5xl mb-6 transform group-hover:scale-110 transition duration-300">🛗</div>
+                <h3 class="text-xl font-bold text-navy mb-3">Thang Máy & Nâng Hạ</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Cung cấp giải pháp thang máy gia đình, thang tải hàng, sàn nâng tự động (Dock Leveler) và bàn nâng thủy lực công nghiệp.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Liên hệ -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-orange">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div>
+                <img src="antitech.jpg" alt="Anvitech Logo" class="h-16 object-contain rounded bg-white p-1 mb-6">
+                <p class="text-gray-400 max-w-sm">
+                    Đơn vị hàng đầu cung cấp giải pháp lắp đặt kỹ thuật và gia công cơ khí chất lượng cao tại Việt Nam.
+                </p>
+            </div>
+            <div class="md:text-right">
+                <h3 class="text-2xl font-bold mb-6 text-white">Liên hệ với chúng tôi</h3>
+                <p class="text-gray-300 mb-2"><strong class="text-white">Hotline:</strong> Đang cập nhật...</p>
+                <p class="text-gray-300 mb-2"><strong class="text-white">Email:</strong> contact@anvitech.com.vn</p>
+                <p class="text-gray-300"><strong class="text-white">Địa chỉ:</strong> Đang cập nhật...</p>
+            </div>
+        </div>
+        <div class="text-center text-gray-500 text-sm border-t border-gray-800 pt-8">
+            &copy; 2026 Anvitech. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
