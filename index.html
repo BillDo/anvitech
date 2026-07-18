@@ -1,288 +1,391 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anvitech - Công ty Kỹ thuật Cơ Điện & Năng lượng</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome cho Icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Font chữ Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Cấu hình màu sắc -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: '#1E3A8A',
-                        navyDark: '#172554', 
-                        orange: '#F97316',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <meta name="description" content="Công ty TNHH Kiến Trúc Nội Thất HQN - Thiết Kế & Thi Công Nội Thất Cao Cấp">
+    <title>HQN | Kiến Trúc Nội Thất Cao Cấp</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="font-sans text-gray-700 antialiased bg-gray-50">
 
-    <!-- Topbar -->
-    <div class="bg-navyDark text-gray-300 text-sm py-2 hidden md:block">
-        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-            <div class="flex space-x-6">
-                <span><i class="fa-regular fa-clock text-orange mr-2"></i>Thứ 2 - Thứ 7: 8:00 - 17:30</span>
-                <span><i class="fa-solid fa-location-dot text-orange mr-2"></i>Hà Nội, Việt Nam</span>
-            </div>
-            <div class="flex space-x-4">
-                <a href="#" class="hover:text-orange transition"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-orange transition"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        </div>
-    </div>
+<body>
 
     <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#">
-                <img src="antitech.jpg" alt="Anvitech Logo" class="h-14 object-contain">
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="H.Q.N Logo"
+                    onerror="this.onerror=null; this.src=''; this.alt='H.Q.N'; this.style.fontSize='1.5rem'; this.style.color='#006a8f'; this.style.fontWeight='700';">
             </a>
-            
-            <!-- Menu -->
-            <nav class="hidden lg:flex space-x-8 font-bold text-navy">
-                <a href="#" class="text-orange">Trang chủ</a>
-                <a href="#about" class="hover:text-orange transition">Giới thiệu</a>
-                <a href="#services" class="hover:text-orange transition">Dịch vụ</a>
-                <a href="#projects" class="hover:text-orange transition">Dự án</a>
-                <a href="#contact" class="hover:text-orange transition">Liên hệ</a>
-            </nav>
-
-            <!-- Hotline Button -->
-            <div class="hidden md:flex items-center gap-4">
-                <div class="text-right">
-                    <p class="text-xs text-gray-500 font-semibold">Gọi ngay để tư vấn</p>
-                    <p class="text-navy font-bold text-lg">09xx.xxx.xxx</p>
-                </div>
-                <a href="tel:090000000" class="bg-orange text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-orange-600 transition shadow-lg">
-                    <i class="fa-solid fa-phone-volume"></i>
-                </a>
-            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Trang Chủ</a></li>
+                <li><a href="#about">Về Chúng Tôi</a></li>
+                <li><a href="#services">Dịch Vụ</a></li>
+                <li><a href="#projects">Dự Án</a></li>
+                <li><a href="#real-photos">Ảnh Thực Tế</a></li>
+                <li><a href="#testimonials">Đánh Giá</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+            <button class="hamburger">☰</button>
         </div>
     </header>
 
-    <!-- Hero Banner (Đã sửa lỗi hiển thị ảnh) -->
-    <section class="relative h-[600px] flex items-center">
-        <!-- Ảnh nền nhúng bằng style nội tuyến để tránh lỗi Tailwind CDN -->
-        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541888086225-f6735e29fbd3?q=80&w=2070&auto=format&fit=crop');"></div>
-        <!-- Lớp phủ tối -->
-        <div class="absolute inset-0 bg-navyDark/70"></div>
-        
-        <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
-            <div class="max-w-3xl">
-                <span class="inline-block px-4 py-1 bg-orange text-white font-bold text-sm tracking-wider mb-4 border-l-4 border-white">ANVITECH M.E.P</span>
-                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 uppercase">
-                    Giải pháp kỹ thuật <br> <span class="text-orange">toàn diện</span>
-                </h1>
-                <p class="text-lg text-gray-200 mb-8 max-w-xl">
-                    Chuyên gia hàng đầu trong thi công Cơ - Điện - Lạnh, Năng lượng mặt trời, Gia công cơ khí và Hệ thống thang máy tự động.
-                </p>
-                <div class="flex gap-4">
-                    <a href="#services" class="bg-orange hover:bg-white hover:text-navy text-white font-bold py-3 px-8 transition duration-300">
-                        XEM DỊCH VỤ
-                    </a>
-                    <a href="#contact" class="bg-transparent border border-white text-white hover:bg-white hover:text-navy font-bold py-3 px-8 transition duration-300">
-                        LIÊN HỆ
-                    </a>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="images/hero.png" alt="Phòng Khách Sang Trọng" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">Tư Vấn - Thiết Kế - Thi Công Trọn Gói</span>
+            <h1>YOUR HOME - MY FUTURE</h1>
+            <p>Hãy để chúng tôi HQN được thay bạn kể về câu chuyện của ngôi nhà bạn.</p>
+            <a href="#contact" class="btn btn-primary">Nhận Báo Giá</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-            <!-- Cột ảnh -->
-            <div class="relative">
-                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" alt="Về Anvitech" class="rounded shadow-xl z-10 relative">
-                <!-- Khối trang trí -->
-                <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-orange -z-10 rounded"></div>
-                <div class="absolute top-1/2 -translate-y-1/2 -right-12 bg-navy text-white p-6 rounded shadow-lg hidden lg:block">
-                    <h3 class="text-4xl font-extrabold text-orange mb-1">10+</h3>
-                    <p class="font-bold">Năm Kinh Nghiệm</p>
-                </div>
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <div class="about-image reveal">
+                <img src="images/about.png" alt="Văn phòng Kiến Trúc Nội Thất HQN">
             </div>
-            
-            <!-- Cột nội dung -->
-            <div>
-                <h4 class="text-orange font-bold uppercase tracking-wider mb-2">Về Chúng Tôi</h4>
-                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6">Đối Tác Đáng Tin Cậy Của Mọi Công Trình</h2>
-                <p class="text-gray-600 mb-6 leading-relaxed">
-                    Được thành lập với sứ mệnh mang đến những giải pháp kỹ thuật ưu việt, <strong>Anvitech</strong> tự hào sở hữu đội ngũ kỹ sư giàu kinh nghiệm, chuyên môn cao. Chúng tôi cung cấp dịch vụ từ tư vấn, thiết kế, thi công đến bảo trì cho cả mảng dân dụng và công nghiệp.
-                </p>
-                <ul class="space-y-3 mb-8">
-                    <li class="flex items-center text-gray-700">
-                        <i class="fa-solid fa-check text-orange mr-3"></i> Đảm bảo tiến độ, chất lượng thi công khắt khe nhất.
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fa-solid fa-check text-orange mr-3"></i> Áp dụng công nghệ tiên tiến, tối ưu chi phí vận hành.
-                    </li>
-                    <li class="flex items-center text-gray-700">
-                        <i class="fa-solid fa-check text-orange mr-3"></i> Chính sách bảo hành dài hạn, bảo trì chuyên nghiệp.
-                    </li>
-                </ul>
-                <a href="#contact" class="text-navy font-bold hover:text-orange transition border-b-2 border-orange pb-1 inline-flex items-center">
-                    TÌM HIỂU THÊM <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
-                </a>
+            <div class="about-content reveal">
+                <span class="section-subtitle">Về Chúng Tôi</span>
+                <h2>Công ty TNHH Kiến Trúc Nội Thất HQN</h2>
+                <p>Chúng tôi là đơn vị thiết kế và thi công nội thất hàng đầu. Với hơn 6 năm kinh nghiệm, HQN
+                    chuyên kiến tạo những không gian sống sang trọng, độc bản, phản ánh đúng tầm nhìn và đẳng cấp của
+                    gia chủ.</p>
+                <p>Sở hữu hệ thống xưởng sản xuất quy mô lớn, chúng tôi cam kết kiểm soát chất lượng đến từng chi tiết
+                    nhỏ nhất và mang đến những giải pháp thi công trọn gói hoàn hảo nhất.</p>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>30+</h3>
+                        <p>Dự Án Hoàn Thành</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>2</h3>
+                        <p>Xưởng Sản Xuất</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>6</h3>
+                        <p>Năm Kinh Nghiệm</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h4 class="text-orange font-bold uppercase tracking-wider mb-2">Lĩnh Vực Của Chúng Tôi</h4>
-                <h2 class="text-3xl md:text-4xl font-bold text-navy">Dịch Vụ Nổi Bật</h2>
-                <div class="w-16 h-1 bg-orange mx-auto mt-4"></div>
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Chuyên Môn Của Chúng Tôi</span>
+                <h2>Dịch Vụ Cao Cấp</h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-white p-8 group hover:-translate-y-2 transition duration-300 border-b-4 border-transparent hover:border-orange shadow-sm hover:shadow-xl relative overflow-hidden">
-                    <div class="text-orange text-4xl mb-6"><i class="fa-solid fa-solar-panel"></i></div>
-                    <h3 class="text-xl font-bold text-navy mb-4 group-hover:text-orange transition">Năng Lượng Mặt Trời</h3>
-                    <p class="text-gray-600 mb-6">Hệ thống điện năng lượng mặt trời cho gia đình, nhà xưởng, chung cư. Tối ưu năng lượng, tiết kiệm chi phí.</p>
-                    <a href="#" class="text-navy font-bold group-hover:text-orange text-sm"><i class="fa-solid fa-plus mr-1"></i> CHI TIẾT</a>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">✦</div>
+                    <h3>Thiết Kế Nội Thất</h3>
+                    <p>Các ý tưởng thiết kế độc bản được tinh chỉnh cho phong cách sống của bạn, kết hợp hoàn hảo giữa
+                        tính thẩm mỹ và công năng.</p>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="bg-white p-8 group hover:-translate-y-2 transition duration-300 border-b-4 border-transparent hover:border-orange shadow-sm hover:shadow-xl relative overflow-hidden">
-                    <div class="text-orange text-4xl mb-6"><i class="fa-solid fa-plug-circle-bolt"></i></div>
-                    <h3 class="text-xl font-bold text-navy mb-4 group-hover:text-orange transition">Thi Công Hệ Thống Điện</h3>
-                    <p class="text-gray-600 mb-6">Tủ điện phân phối, Smart Home, Camera, hệ thống điện nhẹ, tủ bù và trạm máy phát điện công nghiệp.</p>
-                    <a href="#" class="text-navy font-bold group-hover:text-orange text-sm"><i class="fa-solid fa-plus mr-1"></i> CHI TIẾT</a>
+                <div class="service-card reveal" style="transition-delay: 0.1s;">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Thi Công Trọn Gói</h3>
+                    <p>Từ bản vẽ đến lúc bàn giao, đội ngũ chuyên gia của chúng tôi quản lý toàn bộ quá trình thi công
+                        một cách liền mạch.</p>
                 </div>
-
-                <!-- Card 3 -->
-                <div class="bg-white p-8 group hover:-translate-y-2 transition duration-300 border-b-4 border-transparent hover:border-orange shadow-sm hover:shadow-xl relative overflow-hidden">
-                    <div class="text-orange text-4xl mb-6"><i class="fa-solid fa-snowflake"></i></div>
-                    <h3 class="text-xl font-bold text-navy mb-4 group-hover:text-orange transition">Cơ Điện Lạnh (HVAC)</h3>
-                    <p class="text-gray-600 mb-6">Điều hòa trung tâm Chiller, VRV/VRF, xử lý không khí AHU, thông gió và làm mát nhà xưởng chuyên nghiệp.</p>
-                    <a href="#" class="text-navy font-bold group-hover:text-orange text-sm"><i class="fa-solid fa-plus mr-1"></i> CHI TIẾT</a>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="bg-white p-8 group hover:-translate-y-2 transition duration-300 border-b-4 border-transparent hover:border-orange shadow-sm hover:shadow-xl relative overflow-hidden">
-                    <div class="text-orange text-4xl mb-6"><i class="fa-solid fa-gears"></i></div>
-                    <h3 class="text-xl font-bold text-navy mb-4 group-hover:text-orange transition">Gia Công Cơ Khí</h3>
-                    <p class="text-gray-600 mb-6">Kết cấu thép công nghiệp, cửa nhôm kính, khung bảo vệ, bàn thao tác, kệ kho Inox theo yêu cầu.</p>
-                    <a href="#" class="text-navy font-bold group-hover:text-orange text-sm"><i class="fa-solid fa-plus mr-1"></i> CHI TIẾT</a>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="bg-white p-8 group hover:-translate-y-2 transition duration-300 border-b-4 border-transparent hover:border-orange shadow-sm hover:shadow-xl relative overflow-hidden">
-                    <div class="text-orange text-4xl mb-6"><i class="fa-solid fa-elevator"></i></div>
-                    <h3 class="text-xl font-bold text-navy mb-4 group-hover:text-orange transition">Thang Máy & Nâng Hạ</h3>
-                    <p class="text-gray-600 mb-6">Thang máy gia đình, tải hàng. Sàn nâng tự động (Dock Leveler), bàn nâng và xe nâng thủy lực.</p>
-                    <a href="#" class="text-navy font-bold group-hover:text-orange text-sm"><i class="fa-solid fa-plus mr-1"></i> CHI TIẾT</a>
-                </div>
-                
-                <!-- Khối liên hệ nhanh -->
-                <div class="bg-navy p-8 flex flex-col justify-center items-center text-center shadow-xl">
-                    <div class="text-white text-5xl mb-4"><i class="fa-solid fa-headset"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-2">Cần Tư Vấn Kỹ Thuật?</h3>
-                    <p class="text-gray-300 mb-4 text-sm">Gửi yêu cầu ngay để nhận báo giá chi tiết</p>
-                    <a href="#contact" class="bg-orange hover:bg-white hover:text-navy text-white font-bold py-2 px-6 transition duration-300">
-                        LIÊN HỆ NGAY
-                    </a>
+                <div class="service-card reveal" style="transition-delay: 0.2s;">
+                    <div class="service-icon">🛋️</div>
+                    <h3>Nội Thất Theo Yêu Cầu</h3>
+                    <p>Hệ thống xưởng sản xuất của chúng tôi trực tiếp chế tác các sản phẩm nội thất cao cấp, vừa vặn
+                        hoàn hảo với không gian mới của bạn.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="bg-navyDark py-16 relative">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-700">
-            <div>
-                <div class="text-4xl font-extrabold text-orange mb-2">500+</div>
-                <div class="text-white font-semibold">Dự án hoàn thành</div>
-            </div>
-            <div>
-                <div class="text-4xl font-extrabold text-orange mb-2">50+</div>
-                <div class="text-white font-semibold">Kỹ sư chuyên gia</div>
-            </div>
-            <div>
-                <div class="text-4xl font-extrabold text-orange mb-2">100%</div>
-                <div class="text-white font-semibold">Cam kết tiến độ</div>
-            </div>
-            <div>
-                <div class="text-4xl font-extrabold text-orange mb-2">24/7</div>
-                <div class="text-white font-semibold">Hỗ trợ kỹ thuật</div>
+    <!-- Philosophy Quote Banner -->
+    <section class="philosophy-quote">
+        <div class="container">
+            <div class="quote-content reveal">
+                <span class="quote-mark">“</span>
+                <blockquote>
+                    Khi không gian sống là tác phẩm nghệ thuật, mỗi thiết kế là một câu chuyện mà khách hàng và đội ngũ thiết kế của chúng tôi muốn kể cho các bạn nghe!
+                </blockquote>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="bg-gray-900 text-gray-400 pt-16 pb-8 border-t-[5px] border-orange">
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12 mb-12">
-            <!-- Cột 1 -->
-            <div>
-                <div class="bg-white inline-block p-2 rounded mb-6">
-                    <img src="antitech.jpg" alt="Anvitech Logo" class="h-12 object-contain">
-                </div>
-                <p class="mb-6 leading-relaxed">
-                    Anvitech tự hào là nhà thầu cung cấp giải pháp Cơ - Điện - Lạnh, Năng lượng mặt trời và Cơ khí công nghiệp hàng đầu, kiến tạo những công trình bền vững.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="#" class="w-10 h-10 bg-gray-800 flex items-center justify-center hover:bg-orange text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 flex items-center justify-center hover:bg-orange text-white transition"><i class="fa-brands fa-youtube"></i></a>
-                </div>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Hồ Sơ Năng Lực</span>
+                <h2>Dự Án Tiêu Biểu</h2>
             </div>
 
-            <!-- Cột 2 -->
-            <div>
-                <h4 class="text-white text-xl font-bold mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-orange">Dịch vụ chính</h4>
-                <ul class="space-y-3">
-                    <li><a href="#" class="hover:text-orange transition"><i class="fa-solid fa-chevron-right text-xs mr-2 text-orange"></i>Năng lượng mặt trời</a></li>
-                    <li><a href="#" class="hover:text-orange transition"><i class="fa-solid fa-chevron-right text-xs mr-2 text-orange"></i>Thi công điện dân dụng & CN</a></li>
-                    <li><a href="#" class="hover:text-orange transition"><i class="fa-solid fa-chevron-right text-xs mr-2 text-orange"></i>Hệ thống cơ điện lạnh</a></li>
-                    <li><a href="#" class="hover:text-orange transition"><i class="fa-solid fa-chevron-right text-xs mr-2 text-orange"></i>Gia công lắp ráp cơ khí</a></li>
-                    <li><a href="#" class="hover:text-orange transition"><i class="fa-solid fa-chevron-right text-xs mr-2 text-orange"></i>Hệ thống thang máy, nâng hạ</a></li>
-                </ul>
-            </div>
-
-            <!-- Cột 3 -->
-            <div>
-                <h4 class="text-white text-xl font-bold mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-orange">Thông tin liên hệ</h4>
-                <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <i class="fa-solid fa-location-dot mt-1 mr-4 text-orange text-lg"></i>
-                        <span>Tòa nhà XYZ, Đường ABC, Quận Đống Đa, Hà Nội</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fa-solid fa-phone mt-1 mr-4 text-orange text-lg"></i>
-                        <span class="font-bold text-white">09xx.xxx.xxx</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fa-solid fa-envelope mt-1 mr-4 text-orange text-lg"></i>
-                        <span>contact@anvitech.com.vn</span>
-                    </li>
-                </ul>
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <img src="images/project1.png" alt="Phòng Ngủ Master">
+                    <div class="project-overlay">
+                        <h3>Villa Serenity</h3>
+                        <p>Phòng Ngủ Master</p>
+                    </div>
+                </div>
+                <div class="project-card reveal" style="transition-delay: 0.1s;">
+                    <img src="images/project2.png" alt="Bếp Hiện Đại">
+                    <div class="project-overlay">
+                        <h3>The Horizon Penthouse</h3>
+                        <p>Không Gian Bếp</p>
+                    </div>
+                </div>
+                <div class="project-card reveal" style="transition-delay: 0.2s;">
+                    <img src="images/project3.png" alt="Phòng Tắm Sang Trọng">
+                    <div class="project-overlay">
+                        <h3>Oasis Residence</h3>
+                        <p>Phòng Tắm Chuẩn Spa</p>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div class="border-t border-gray-800 text-center pt-8 text-sm">
-            <p>&copy; 2026 Anvitech. Bảo lưu mọi quyền.</p>
+    </section>
+
+    <!-- Real Photos Section -->
+    <section id="real-photos" class="real-photos">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Ảnh Thực Tế</span>
+                <h2>Hình Ảnh Thực Tế Công Trình</h2>
+            </div>
+
+            <div class="real-photos-grid" id="real-photos-grid">
+                <!-- Sẽ được tải động bằng JavaScript -->
+            </div>
+
+            <div class="real-photos-pagination" id="real-photos-pagination">
+                <!-- Phân trang sẽ được tạo tự động bằng JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" aria-label="Close modal">&times;</button>
+
+        <div class="lightbox-container">
+            <button class="lightbox-nav lightbox-prev" aria-label="Previous image">&#8249;</button>
+
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="Project Image">
+                <div class="lightbox-caption-wrap">
+                    <h4 id="lightbox-project-title"></h4>
+                    <p id="lightbox-image-desc"></p>
+                    <span id="lightbox-counter"></span>
+                </div>
+            </div>
+
+            <button class="lightbox-nav lightbox-next" aria-label="Next image">&#8250;</button>
+        </div>
+
+        <div class="lightbox-thumbnails-wrap">
+            <div id="lightbox-thumbnails" class="lightbox-thumbnails"></div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-subtitle">Phản Hồi Khách Hàng</span>
+                <h2>Khách Hàng Nói Gì Về Chúng Tôi</h2>
+            </div>
+
+            <div class="testimonials-slider-wrapper reveal">
+                <button class="slider-btn slider-btn-prev" id="testimonial-prev" aria-label="Previous">&#8249;</button>
+
+                <div class="testimonials-slider-track-outer">
+                    <div class="testimonials-slider-track" id="testimonials-track">
+
+                        <!-- Card 1: Anh Minh -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-photo-wrap">
+                                <img src="images/customer_anh_minh.png" alt="Anh Minh" class="testimonial-photo">
+                            </div>
+                            <div class="testimonial-stars">★★★★★</div>
+                            <div class="quote-icon">❝</div>
+                            <p class="testimonial-text">"HQN đã biến ý tưởng về ngôi nhà mơ ước của tôi thành hiện thực.
+                                Sự tận tâm và chuyên nghiệp của đội ngũ thiết kế thực sự vượt ngoài mong đợi. Không gian
+                                sống mới không chỉ đẹp mà còn rất tối ưu công năng."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-author-info">
+                                    <h4>Anh Minh</h4>
+                                    <p>Chủ nhân Villa Serenity</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Chị Lan -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-photo-wrap">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Chị Lan"
+                                    class="testimonial-photo">
+                            </div>
+                            <div class="testimonial-stars">★★★★★</div>
+                            <div class="quote-icon">❝</div>
+                            <p class="testimonial-text">"Chất lượng thi công tuyệt vời, tỉ mỉ đến từng chi tiết. Tôi đặc
+                                biệt ấn tượng với đồ nội thất may đo từ xưởng của HQN. Mọi thứ đều vừa vặn và toát lên
+                                vẻ sang trọng đẳng cấp."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-author-info">
+                                    <h4>Chị Lan</h4>
+                                    <p>Cư dân The Horizon Penthouse</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Anh Hoàng -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-photo-wrap">
+                                <img src="images/anh_hoang.jpg" alt="Anh Hoàng" class="testimonial-photo">
+                            </div>
+                            <div class="testimonial-stars">★★★★★</div>
+                            <div class="quote-icon">❝</div>
+                            <p class="testimonial-text">"Từ khâu tư vấn thiết kế đến khi bàn giao, mọi quy trình đều rất
+                                rõ ràng và chuyên nghiệp. Tôi hoàn toàn yên tâm khi giao phó căn hộ của mình cho HQN.
+                                Kết quả nhận được thực sự làm tôi hài lòng."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-author-info">
+                                    <h4>Anh Hoàng</h4>
+                                    <p>Chủ đầu tư Oasis Residence</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Chị Thu -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-photo-wrap">
+                                <img src="images/chi_thu.jpg" alt="Chị Thu" class="testimonial-photo">
+                            </div>
+                            <div class="testimonial-stars">★★★★★</div>
+                            <div class="quote-icon">❝</div>
+                            <p class="testimonial-text">"Tôi rất hài lòng với dịch vụ tư vấn của HQN. Đội ngũ kiến trúc
+                                sư lắng nghe kỹ lưỡng từng yêu cầu của gia đình và đưa ra giải pháp thiết kế thực sự phù
+                                hợp với lối sống của chúng tôi."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-author-info">
+                                    <h4>Chị Thu</h4>
+                                    <p>Gia chủ Căn Hộ Sky Garden</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Anh Phúc -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-photo-wrap">
+                                <img src="images/anh_phuc.jpg" alt="Anh Phúc" class="testimonial-photo">
+                            </div>
+                            <div class="testimonial-stars">★★★★★</div>
+                            <div class="quote-icon">❝</div>
+                            <p class="testimonial-text">"Chúng tôi đã tin tưởng HQN thiết kế và thi công toàn bộ văn
+                                phòng mới. Không gian làm việc sau khi hoàn thành vô cùng ấn tượng, nhân viên ai cũng
+                                hứng khởi và năng suất tăng rõ rệt."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-author-info">
+                                    <h4>Anh Phúc</h4>
+                                    <p>Giám Đốc Công Ty TechPro</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: Chị Mai -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-photo-wrap">
+                                <img src="https://randomuser.me/api/portraits/women/51.jpg" alt="Chị Mai"
+                                    class="testimonial-photo">
+                            </div>
+                            <div class="testimonial-stars">★★★★★</div>
+                            <div class="quote-icon">❝</div>
+                            <p class="testimonial-text">"Điểm tôi đánh giá cao nhất ở HQN là sự minh bạch về chi phí và
+                                tiến độ. Không phát sinh ngoài dự toán, bàn giao đúng hạn. Đây là yếu tố rất quan trọng
+                                và hiếm thấy trong ngành xây dựng."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-author-info">
+                                    <h4>Chị Mai</h4>
+                                    <p>Chủ Biệt Thự Liền Kề Green Park</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="slider-btn slider-btn-next" id="testimonial-next" aria-label="Next">&#8250;</button>
+            </div>
+
+            <div class="slider-dots" id="testimonial-dots"></div>
+        </div>
+    </section>
+
+
+    <!-- Contact Footer Section -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about reveal">
+                    <h3>Kiến Trúc Nội Thất HQN</h3>
+                    <p>Kiến tạo những không gian khơi nguồn cảm hứng. Chúng tôi cung cấp các giải pháp thiết kế và thi
+                        công toàn diện cho các công trình nhà ở và thương mại cao cấp.</p>
+                </div>
+                <div class="footer-links reveal" style="transition-delay: 0.1s;">
+                    <h4>Liên Kết Nhanh</h4>
+                    <ul>
+                        <li><a href="#home">Trang Chủ</a></li>
+                        <li><a href="#about">Về Chúng Tôi</a></li>
+                        <li><a href="#projects">Hồ Sơ Năng Lực</a></li>
+                        <li><a href="#real-photos">Ảnh Thực Tế</a></li>
+                        <li><a href="#testimonials">Đánh Giá</a></li>
+                        <li><a href="#services">Dịch Vụ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links reveal" style="transition-delay: 0.2s;">
+                    <h4>Liên Hệ</h4>
+                    <ul>
+                        <li><strong>Công ty TNHH Kiến Trúc Nội Thất HQN</strong></li>
+                        <li>Địa chỉ: TDP Đại Cát 3, Phường Thượng Cát, TP Hà Nội</li>
+                        <li>Xưởng sản xuất 1: Hát Môn - Phúc Thọ - Hà Nội</li>
+                        <li>Xưởng sản xuất 2: Xã Nghĩa Sơn - Tỉnh Ninh Bình</li>
+                        <li>Email: <a href="mailto:trangtrinoithat.hqn@gmail.com">trangtrinoithat.hqn@gmail.com</a></li>
+                        <li>Điện thoại: <a href="tel:+84348899565">0348 899 565</a> | <a href="tel:+84974498832">0974
+                                498 832</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom reveal">
+                <p>&copy; 2026 Công ty TNHH Kiến Trúc Nội Thất HQN. Mọi quyền được bảo lưu.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+        <a href="https://zalo.me/0974498832" target="_blank" rel="noopener noreferrer" class="contact-btn zalo-btn" title="Chat qua Zalo">
+            <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="12" fill="#0068FF"/>
+                <path d="M12 4.5C7.86 4.5 4.5 7.42 4.5 11c0 2.05 1.11 3.86 2.87 5.09v2.24c0 .35.39.56.68.39l2.45-1.47c.48.16.98.25 1.5.25 4.14 0 7.5-2.92 7.5-6.5s-3.36-6.5-7.5-6.5z" fill="#FFF"/>
+                <text x="12" y="14.5" font-family="'Inter', sans-serif" font-weight="900" font-style="italic" font-size="10" fill="#0068FF" text-anchor="middle">Z</text>
+            </svg>
+        </a>
+        <a href="tel:0974498832" class="contact-btn phone-btn" title="Gọi hotline">
+            <svg viewBox="0 0 24 24">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#FFF"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>
