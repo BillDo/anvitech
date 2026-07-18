@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             key: 'dien-cong-nghiep',
             title: 'HỆ THỐNG TỦ ĐIỆN VÀ PHÂN PHỐI NGUỒN - NHÀ MÁY THÉP',
-            coverUrl: 'https://images.unsplash.com/photo-1621905252507-b354bc25edac?auto=format&fit=crop&w=800&q=80',
+            coverUrl: 'images/images/tu-dien-phan-phoi-cho-nha-xuong-san-xuat.jpg?auto=format&fit=crop&w=800&q=80',
             images: [
                 {
                     url: 'https://images.unsplash.com/photo-1621905252507-b354bc25edac?auto=format&fit=crop&w=1200&q=80',
