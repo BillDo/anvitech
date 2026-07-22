@@ -169,7 +169,8 @@ header.scrolled .hamburger {
   display: inline-block;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: #ffffff;
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.35);
@@ -179,7 +180,16 @@ header.scrolled .hamburger {
   transform: translateY(-2px);
 }
 
-header.scrolled .nav-links a:hover {
+.nav-links a.active {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background: rgba(245, 130, 32, 0.15);
+  box-shadow: 0 4px 20px rgba(245, 130, 32, 0.25), inset 0 0 12px rgba(245, 130, 32, 0.15);
+  font-weight: 600;
+}
+
+header.scrolled .nav-links a:hover,
+header.scrolled .nav-links a.active {
   color: var(--color-primary);
   background: rgba(15, 61, 89, 0.08);
   border-color: rgba(15, 61, 89, 0.25);
@@ -187,6 +197,14 @@ header.scrolled .nav-links a:hover {
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 4px 15px rgba(15, 61, 89, 0.12), inset 0 0 10px rgba(15, 61, 89, 0.04);
   transform: translateY(-2px);
+}
+
+header.scrolled .nav-links a.active {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background: rgba(245, 130, 32, 0.08);
+  box-shadow: 0 4px 15px rgba(245, 130, 32, 0.15), inset 0 0 10px rgba(245, 130, 32, 0.05);
+  font-weight: 600;
 }
 
 .hamburger {

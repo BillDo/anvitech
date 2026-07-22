@@ -20,6 +20,53 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Active navigation link update on click & scroll
+    const menuItems = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('section[id], footer[id]');
+
+    function updateActiveNav() {
+        let currentScroll = window.pageYOffset;
+        let windowHeight = window.innerHeight;
+        let documentHeight = document.documentElement.scrollHeight;
+
+        // Bottom of page detection (activates #contact when user reaches footer)
+        if (currentScroll + windowHeight >= documentHeight - 50) {
+            menuItems.forEach(item => item.classList.remove('active'));
+            const contactLink = document.querySelector('.nav-links a[href="#contact"]');
+            if (contactLink) contactLink.classList.add('active');
+            return;
+        }
+
+        sections.forEach(section => {
+            const sectionHeight = section.offsetHeight;
+            const sectionTop = section.offsetTop - 120;
+            const sectionId = section.getAttribute('id');
+
+            if (currentScroll >= sectionTop && currentScroll < sectionTop + sectionHeight) {
+                menuItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('href') === `#${sectionId}`) {
+                        item.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveNav);
+
+    menuItems.forEach(item => {
+        item.addEventListener('click', function () {
+            menuItems.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+
+            if (navLinks && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                if (hamburger) hamburger.textContent = '☰';
+            }
+        });
+    });
+
     // Scroll reveal animation
     const reveals = document.querySelectorAll('.reveal');
     const revealOnScroll = () => {
